@@ -1,0 +1,4 @@
+#Missing "Pcl" package
+sudo apt-get install ros-indigo-pcl-ros
+#Missing "pcap.h" headler file
+sudo apt-get install libpcap0.8-dev
