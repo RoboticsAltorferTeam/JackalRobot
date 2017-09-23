@@ -2,6 +2,9 @@
 
 % setenv('ROS_MASTER_URI','http://10.10.10.101:11311')
 % setenv('ROS_IP','10.10.10.102')
+% rosDevice = rosdevice('10.10.10.101','administrator','clearpath');
+% rosDevice = rosdevice('192.168.1.11','administrator','clearpath');
+% openShell(rosDevice)
 % [velPub, velMsg] = rospublisher('cmd_vel');
 
 imuSub = rossubscriber('imu/data_raw');
@@ -13,9 +16,9 @@ odomLog(1) = odomData;
 
 for i = 1:1000000
     send(velPub, velMsg);
-    imuData = receive(imuSub,1);
-    odomData = receive(odomSub,1);
-    imuLog(i) = imuData;
-    odomLog(i) = odomData;
+%     imuData = receive(imuSub,1);
+%     odomData = receive(odomSub,1);
+%     imuLog(i) = imuData;
+%     odomLog(i) = odomData;
 %     pause(1);
 end
