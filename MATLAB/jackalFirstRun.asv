@@ -5,11 +5,7 @@
 % rosDevice = rosdevice('10.10.10.101','administrator','clearpath');
 % rosDevice = rosdevice('192.168.1.11','administrator','clearpath');
 % openShell(rosDevice)
-
-clear
-[velPub, velMsg] = rospublisher('cmd_vel');
-
-velMsg.Linear.X = 0.2;
+% [velPub, velMsg] = rospublisher('cmd_vel');
 
 imuSub = rossubscriber('imu/data_raw');
 odomSub = rossubscriber('odometry/filtered');
